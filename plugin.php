@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Blackbird Custom Functionality
- * Plugin URI: https://github.com/Herm71/blackbird-core-functionality-plugin.git
- * Description: Contains custom functionality. Theme independent.
+ * Plugin Name: UC Santa Cruz Alumni Quiz
+ * Plugin URI: https://github.com/Herm71/alumni-quiz
+ * Description: Test your UC Santa Cruz Alumni Knowledge!
  * Version: 1.1.0
- * Author: Blackbird Consulting
- * Author URI: http://www.blackbirdconsult.com/
+ * Author: Jason Chafin
+ * Author URI: http://www.ucsc.edu/
  * License: GPL2
  * 
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU 
