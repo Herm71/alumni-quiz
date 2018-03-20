@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px Georgia, serif;
+}
+
+#page-wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    /*padding: 0 5%;*/
+    display: block;
+    position: relative;
+    border: 1px solid purple;
+}
+
+h1 {
+    margin: 25px 0;
+    font: 14px Georgia, Serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+img {
+    height: 200px;
+    width: 150px;
+}
+
+#quiz input {
+    vertical-align: middle;
+}
+
+#quiz ol,
+.results ol {
+    margin: 0 0 10px 20px;
+}
+
+#quiz ol li,
+.results ol li {
+    margin: 0 0 20px 0;
+    float: left;
+    padding: 10px;
+    width: 22%;
+    text-align: center;
+    min-height: 350px;
+}
+
+#quiz p,
+.results p {
+    text-align: left;
+    margin: 5px 0;
+}
+
+#quiz ol li div {
+    padding: 4px 0;
+}
+
+#quiz h3 {
+    font-size: 17px;
+    margin: 0 0 1px 0;
+    color: #666;
+}
+
+#results {
+    font: 44px Georgia, Serif;
+}
+
+select {
+    /* margin: 50px; */
+    border: 1px solid #111;
+    background: transparent;
+    width: 150px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #eee;
+}
+
+
+/* CAUTION: IE hackery ahead */
+
+select::-ms-expand {
+    display: none;
+    /* remove default arrow on ie10 and ie11 */
+}
+
+
+/* target Internet Explorer 9 to undo the custom arrow */
+
+@media screen and (min-width:0\0) {
+    select {
+        background: none\9;
+        padding: 5px\9;
+    }
+}
+
+.clear {
+    clear: both
+}
