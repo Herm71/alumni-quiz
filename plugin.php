@@ -35,3 +35,6 @@ include_once( BB_DIR . '/assets/functions/general.php' );
 
 // Quiz
 include_once( BB_DIR . '/assets/functions/quiz.php' );
+
+// Results
+include_once( BB_DIR . '/assets/functions/grade.php' );

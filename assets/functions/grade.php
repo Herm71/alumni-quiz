@@ -1,21 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	
-	<title>PHP Quiz</title>
-	
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>
-
-<body>
-
-	<div id="page-wrap">
-
-		<h1>UC Santa Cruz Alumni Quiz Results</h1>
+add_shortcode ('quiz-results','quiz_results');
+    function quiz_results(){
+    echo "<div class='quiz-wrap'><h1>UC Santa Cruz Alumni Quiz Results</h1>";
 		
-        <?php
 		include 'variables.php';
             $firstName = $_POST['first-name'];	
             $answer1 = $_POST['question-1-answers'];
@@ -54,51 +42,51 @@
 					echo "<div class='results'>
 					<ol>
 					
-					<li>
-					<img src='images/alonso-200h.png'><h3>".$alumni1."</h3><p>".$alumni1Job."</p>
+                    <li><img src=".plugins_url('images/alonso-200h.png', __DIR__)."><h3>".$alumni1."</h3><p>".$alumni1Job."</p>
+                    
 					<p>
 					</li>
 					<li>
-					<img src='images/barnes-200h.png'><h3>".$alumni2."</h3><p>".$alumni2Job."</p>
+					<img src=".plugins_url('images/barnes-200h.png', __DIR__)."><h3>".$alumni2."</h3><p>".$alumni2Job."</p>
 					</li>
 					<li>
-					<img src='images/beggs-200h.png'><h3>".$alumni3."</h3><p>".$alumni3Job."</p>
+					<img src=".plugins_url('images/beggs-200h.png', __DIR__)."><h3>".$alumni3."</h3><p>".$alumni3Job."</p>
 					</li>
 					<li>
-					<img src='images/grande-200h.png'><h3>".$alumni4."</h3><p>".$alumni4Job."</p>
+					<img src=".plugins_url('images/grande-200h.png', __DIR__)."><h3>".$alumni4."</h3><p>".$alumni4Job."</p>
 					</li>
 					<li>
-					<img src='images/laird-200h.png'><h3>".$alumni5."</h3><p>".$alumni5Job."</p>
+					<img src=".plugins_url('images/laird-200h.png', __DIR__)."><h3>".$alumni5."</h3><p>".$alumni5Job."</p>
 					</li>
 					<li>
-					<img src='images/mendoza-200h.png'><h3>".$alumni6."</h3><p>".$alumni6Job."</p>
+					<img src=".plugins_url('images/mendoza-200h.png', __DIR__)."><h3>".$alumni6."</h3><p>".$alumni6Job."</p>
 					</li>
 					<li>
-					<img src='images/nagano-200h.png'><h3>".$alumni7."</h3><p>".$alumni7Job."</p>
+					<img src=".plugins_url('images/nagano-200h.png', __DIR__)."><h3>".$alumni7."</h3><p>".$alumni7Job."</p>
 					</li>
 					<li>
-					<img src='images/packard-200h.png'><h3>".$alumni8."</h3><p>".$alumni8Job."</p>
+					<img src=".plugins_url('images/packard-200h.png', __DIR__)."><h3>".$alumni8."</h3><p>".$alumni8Job."</p>
 					</li>
 					<li>
-					<img src='images/perry-200h.png'><h3>".$alumni9."</h3><p>".$alumni9Job."</p>
+					<img src=".plugins_url('images/perry-200h.png', __DIR__)."><h3>".$alumni9."</h3><p>".$alumni9Job."</p>
 					</li>
 					<li>
-					<img src='images/sanjayan-200h.png'><h3>".$alumni10."</h3><p>".$alumni10Job."</p>
+					<img src=".plugins_url('images/sanjayan-200h.png', __DIR__)."><h3>".$alumni10."</h3><p>".$alumni10Job."</p>
 					</li>
 					<li>
-					<img src='images/sullivan-200h.png'><h3>".$alumni11."</h3><p>".$alumni11Job."</p>
+					<img src=".plugins_url('images/sullivan-200h.png', __DIR__)."><h3>".$alumni11."</h3><p>".$alumni11Job."</p>
 					</li>
 					<li>
-					<img src='images/weil-200h.png'><h3>".$alumni12."</h3><p>".$alumni12Job."</p>
+					<img src=".plugins_url('images/weil-200h.png', __DIR__)."><h3>".$alumni12."</h3><p>".$alumni12Job."</p>
 					</li>
 					<li>
-					<img src='images/wojcicki-200h.png'><h3>".$alumni13."</h3><p>".$alumni13Job."</p>
+					<img src=".plugins_url('images/wojcicki-200h.png', __DIR__)."><h3>".$alumni13."</h3><p>".$alumni13Job."</p>
 					</li>
 					</ol></div>";
 							echo "<div id='results'>$totalCorrect / 13 correct</div>";
-							$file = 'results.php';
+							$file = plugin_dir_path('results.php', __DIR__);
 							$json = json_encode($_POST);
-							var_dump($json);
+							var_dump($file);
 							file_put_contents($file,$json, FILE_APPEND | LOCK_EX);
 				} else {
 					echo "<p>You Lose! ".$firstName."</p>";
@@ -107,7 +95,7 @@
 					echo "<ol>";
 					
 					echo "<li>";
-					echo "<img src='images/alonso-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/alonso-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni1."</h3><p>".$alumni1Job."</p>";
 					if ($answer1 == $k){
 						echo "<p class='correct'>Correct!</p>";
@@ -116,7 +104,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/barnes-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/barnes-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni2."</h3><p>".$alumni2Job."</p>";
 					if ($answer2 == $b){
 						echo "<p class='correct'>Correct!</p>";
@@ -125,7 +113,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/beggs-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/beggs-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni3."</h3><p>".$alumni3Job."</p>";
 					if ($answer3 == $g){
 						echo "<p class='correct'>Correct!</p>";
@@ -134,7 +122,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/grande-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/grande-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni4."</h3><p>".$alumni4Job."</p>";
 					if ($answer4 == $m){
 						echo "<p class='correct'>Correct!</p>";
@@ -143,7 +131,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/laird-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/laird-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni5."</h3><p>".$alumni5Job."</p>";
 					if ($answer5 == $c){
 						echo "<p class='correct'>Correct!</p>";
@@ -152,7 +140,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/mendoza-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/mendoza-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni6."</h3><p>".$alumni6Job."</p>";
 					if ($answer6 == $f){
 						echo "<p class='correct'>Correct!</p>";
@@ -161,7 +149,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/nagano-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/nagano-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni7."</h3><p>".$alumni7Job."</p>";
 					if ($answer7 == $h){
 						echo "<p class='correct'>Correct!</p>";
@@ -170,7 +158,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/packard-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/packard-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni8."</h3><p>".$alumni8Job."</p>";
 					if ($answer8 == $i){
 						echo "<p class='correct'>Correct!</p>";
@@ -179,7 +167,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/perry-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/perry-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni9."</h3><p>".$alumni9Job."</p>";
 					if ($answer9 == $l){
 						echo "<p class='correct'>Correct!</p>";
@@ -188,7 +176,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/sanjayan-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/sanjayan-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni10."</h3><p>".$alumni10Job."</p>";
 					if ($answer10 == $j){
 						echo "<p class='correct'>Correct!</p>";
@@ -197,7 +185,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/sullivan-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/sullivan-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni11."</h3><p>".$alumni11Job."</p>";
 					if ($answer11 == $d){
 						echo "<p class='correct'>Correct!</p>";
@@ -206,7 +194,7 @@
 					};
 					echo "</li>";
 					echo "<li>";
-					echo "<img src='images/weil-200h.png'>";
+					echo '<img src="' . plugins_url( 'images/weil-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni12."</h3><p>".$alumni12Job."</p>";
 					if ($answer12 == $e){
 						echo "<p class='correct'>Correct!</p>";
@@ -214,8 +202,8 @@
 						echo "<p class='incorrect'>Your answer: ".$answer12."</p>";
 					};
 					echo "</li>";
-					echo "<li>";
-					echo "<img src='images/wojcicki-200h.png'>";
+                    echo "<li>";
+                    echo '<img src="' . plugins_url( 'images/wojcicki-200h.png', __DIR__ ) . '" > ';
 					echo "<h3>".$alumni13."</h3><p>".$alumni13Job."</p>";
 					if ($answer13 == $a){
 						echo "<p class='correct'>Correct!</p>";
@@ -227,10 +215,8 @@
 					echo "<div class='clear'></div>";
 							echo '<button type="reset" value="Try again" />Try Again</button>';
 				}
-      ?>
 	
-	</div>
+    echo '</div>';
+            }
 
-</body>
-
-</html>
+    ?>

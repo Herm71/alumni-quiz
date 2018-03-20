@@ -41,7 +41,7 @@
 //     $data = htmlspecialchars($data);
 //     return $data;
 //   }
-
+add_shortcode ('alumni-quiz', 'alumni_quiz');
 function alumni_quiz(){
     include 'variables.php';
     
@@ -49,7 +49,8 @@ function alumni_quiz(){
 
             <h1>UC Santa Cruz Alumni Quiz!</h1>
             
-            <form action="grade.php" method="post" id="quiz">
+            <form action="<?php echo  get_permalink(15); ?>" method="post" id="quiz">
+            <!-- <form action="<?php admin_url( 'admin-post.php' )?>" method="post" id="quiz"> -->
             <ul>
                 <li>First name: <input id="first-name" type="text" name="first-name" value=""></li>
                 <li>Last name: <input id="last-name" type="text" name="last-name" value=""></li>
@@ -336,6 +337,7 @@ function alumni_quiz(){
                 </li>
                 </ol>
                 <div class="clear"></div>
+                <!-- <input type="hidden" name="action" value="process_quiz"> -->
                 <button type="submit" value="Submit Quiz" />Submit Quiz</button>
                 <button type="reset" value="Reset the form" />Reset Form</button>
             
@@ -343,6 +345,13 @@ function alumni_quiz(){
             
         </div><?php
     }
-    add_shortcode ('alumni-quiz', 'alumni_quiz');
+// function quiz_processor(){
+//     if($_POST['process_quiz']){
+//         require_once 'grade.php';
+//         //or your form process code here
+//       }
+// }
 
+// add_action( 'admin_post_nopriv_process_quiz', 'prefix_send_email_to_admin' );
+// add_action( 'admin_post_process_quiz', 'prefix_send_email_to_admin' );
     ?>
