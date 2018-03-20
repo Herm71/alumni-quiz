@@ -16,23 +16,22 @@
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
  */
-
 // Plugin Directory 
 define( 'BB_DIR', dirname( __FILE__ ) );
 
+//enqueue styles
+add_action('wp_enqueue_scripts', 'callback_for_setting_up_scripts');
+function callback_for_setting_up_scripts() {
+    wp_register_style( 'quiz-style', plugins_url('style.css', __FILE__) );
+    wp_enqueue_style( 'quiz-style' );
+}
+
+
+
 //Include Customization files:
- 
-// Post Types
-//include_once( BB_DIR . '/lib/functions/post-types.php' );
-
-// Taxonomies 
-//include_once( BB_DIR . '/lib/functions/taxonomies.php' );
-
-// Shortcodes
-//include_once( BB_DIR . '/lib/widgets/shortcodes.php' );
-
-// Sidebars
-//include_once( BB_DIR . '/lib/widgets/sidebars.php' );
 
 // General
-include_once( BB_DIR . '/lib/functions/general.php' );
+include_once( BB_DIR . '/assets/functions/general.php' );
+
+// Quiz
+include_once( BB_DIR . '/assets/functions/quiz.php' );

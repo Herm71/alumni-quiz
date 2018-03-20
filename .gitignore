@@ -178,6 +178,8 @@ tests/mocks/env/
 # Style sheets
 style.css
 style.min.css
+quiz-style.css
+quiz-style.min.css
 
 # Visual Studio Code
 .vscode/
