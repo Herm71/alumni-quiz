@@ -107,6 +107,23 @@
             min-height: 350px;
         }
     }
+    .alumni-job {
+        font-weight: bold;
+        min-height: 100px;
+    }
+    .correct {
+        color: #f35245;
+        font-weight: bold;
+        min-height: 100px;
+    }
+    .incorrect {
+        font-style: italic;
+        min-height: 100px;
+        span {
+            //text-decoration: underline;
+            font-weight: bold;
+        }
+    }
     p {
         text-align: left;
         margin: 5px 0;

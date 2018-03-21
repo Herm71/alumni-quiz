@@ -49,43 +49,43 @@ add_shortcode ('quiz-results','quiz_results');
 					<ol>
 					
 					<li class='one-fourth first'>
-					<img src=".plugins_url('images/alonso-200h.png', __DIR__)."><h3>".$alumni1."</h3><p>".$alumni1Job."</p>
+					<img src=".plugins_url('images/alonso-200h.png', __DIR__)."><h3>".$alumni1."</h3><p class='alumni-job'>".$alumni1Job."</p>
 					</li>
 					<li class='one-fourth'>
-					<img src=".plugins_url('images/barnes-200h.png', __DIR__)."><h3>".$alumni2."</h3><p>".$alumni2Job."</p>
+					<img src=".plugins_url('images/barnes-200h.png', __DIR__)."><h3>".$alumni2."</h3><p class='alumni-job'>".$alumni2Job."</p>
 					</li>
 					<li class='one-fourth'>
-					<img src=".plugins_url('images/beggs-200h.png', __DIR__)."><h3>".$alumni3."</h3><p>".$alumni3Job."</p>
+					<img src=".plugins_url('images/beggs-200h.png', __DIR__)."><h3>".$alumni3."</h3><p class='alumni-job'>".$alumni3Job."</p>
 					</li>
 					<li class='one-fourth'>
-					<img src=".plugins_url('images/grande-200h.png', __DIR__)."><h3>".$alumni4."</h3><p>".$alumni4Job."</p>
+					<img src=".plugins_url('images/grande-200h.png', __DIR__)."><h3>".$alumni4."</h3><p class='alumni-job'>".$alumni4Job."</p>
 					</li>
 					<li class='one-fourth first'>
-					<img src=".plugins_url('images/laird-200h.png', __DIR__)."><h3>".$alumni5."</h3><p>".$alumni5Job."</p>
+					<img src=".plugins_url('images/laird-200h.png', __DIR__)."><h3>".$alumni5."</h3><p class='alumni-job'>".$alumni5Job."</p>
 					</li>
 					<li class='one-fourth'>
-					<img src=".plugins_url('images/mendoza-200h.png', __DIR__)."><h3>".$alumni6."</h3><p>".$alumni6Job."</p>
+					<img src=".plugins_url('images/mendoza-200h.png', __DIR__)."><h3>".$alumni6."</h3><p class='alumni-job'>".$alumni6Job."</p>
 					</li>
 					<li class='one-fourth'>
-					<img src=".plugins_url('images/nagano-200h.png', __DIR__)."><h3>".$alumni7."</h3><p>".$alumni7Job."</p>
+					<img src=".plugins_url('images/nagano-200h.png', __DIR__)."><h3>".$alumni7."</h3><p class='alumni-job'>".$alumni7Job."</p>
 					</li>
 					<li class='one-fourth'>
-					<img src=".plugins_url('images/packard-200h.png', __DIR__)."><h3>".$alumni8."</h3><p>".$alumni8Job."</p>
+					<img src=".plugins_url('images/packard-200h.png', __DIR__)."><h3>".$alumni8."</h3><p class='alumni-job'>".$alumni8Job."</p>
 					</li>
 					<li class='one-fourth first'>
-					<img src=".plugins_url('images/perry-200h.png', __DIR__)."><h3>".$alumni9."</h3><p>".$alumni9Job."</p>
+					<img src=".plugins_url('images/perry-200h.png', __DIR__)."><h3>".$alumni9."</h3><p class='alumni-job'>".$alumni9Job."</p>
 					</li>
 					<li class='one-fourth'>
-					<img src=".plugins_url('images/sanjayan-200h.png', __DIR__)."><h3>".$alumni10."</h3><p>".$alumni10Job."</p>
+					<img src=".plugins_url('images/sanjayan-200h.png', __DIR__)."><h3>".$alumni10."</h3><p class='alumni-job'>".$alumni10Job."</p>
 					</li>
 					<li class='one-fourth'>
-					<img src=".plugins_url('images/sullivan-200h.png', __DIR__)."><h3>".$alumni11."</h3><p>".$alumni11Job."</p>
+					<img src=".plugins_url('images/sullivan-200h.png', __DIR__)."><h3>".$alumni11."</h3><p class='alumni-job'>".$alumni11Job."</p>
 					</li>
 					<li class='one-fourth'
-					<img src=".plugins_url('images/weil-200h.png', __DIR__)."><h3>".$alumni12."</h3><p>".$alumni12Job."</p>
+					<img src=".plugins_url('images/weil-200h.png', __DIR__)."><h3>".$alumni12."</h3><p class='alumni-job'>".$alumni12Job."</p>
 					</li>
 					<li class='one-fourth first'>
-					<img src=".plugins_url('images/wojcicki-200h.png', __DIR__)."><h3>".$alumni13."</h3><p>".$alumni13Job."</p>
+					<img src=".plugins_url('images/wojcicki-200h.png', __DIR__)."><h3>".$alumni13."</h3><p class='alumni-job'>".$alumni13Job."</p>
 					</li>
 					</ol></div>";
 							echo "<div id='results'>$totalCorrect / 13 correct</div>";
@@ -100,119 +100,119 @@ add_shortcode ('quiz-results','quiz_results');
 					
 					echo "<li class='one-fourth first'>";
 					echo '<img src="' . plugins_url( 'images/alonso-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni1."</h3><p>".$alumni1Job."</p>";
+					echo "<h3>".$alumni1."</h3><p class='alumni-job'>".$alumni1Job."</p>";
 					if ($answer1 == $k){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br> ".$answer1."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br> ".$answer1."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth'>";
 					echo '<img src="' . plugins_url( 'images/barnes-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni2."</h3><p>".$alumni2Job."</p>";
+					echo "<h3>".$alumni2."</h3><p class='alumni-job'>".$alumni2Job."</p>";
 					if ($answer2 == $b){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br> ".$answer2."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br> ".$answer2."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth'>";
 					echo '<img src="' . plugins_url( 'images/beggs-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni3."</h3><p>".$alumni3Job."</p>";
+					echo "<h3>".$alumni3."</h3><p class='alumni-job'>".$alumni3Job."</p>";
 					if ($answer3 == $g){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer3."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer3."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth'>";
 					echo '<img src="' . plugins_url( 'images/grande-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni4."</h3><p>".$alumni4Job."</p>";
+					echo "<h3>".$alumni4."</h3><p class='alumni-job'>".$alumni4Job."</p>";
 					if ($answer4 == $m){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer4."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer4."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth first'>";
 					echo '<img src="' . plugins_url( 'images/laird-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni5."</h3><p>".$alumni5Job."</p>";
+					echo "<h3>".$alumni5."</h3><p class='alumni-job'>".$alumni5Job."</p>";
 					if ($answer5 == $c){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer5."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer5."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth'>";
 					echo '<img src="' . plugins_url( 'images/mendoza-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni6."</h3><p>".$alumni6Job."</p>";
+					echo "<h3>".$alumni6."</h3><p class='alumni-job'>".$alumni6Job."</p>";
 					if ($answer6 == $f){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer6."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer6."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth'>";
 					echo '<img src="' . plugins_url( 'images/nagano-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni7."</h3><p>".$alumni7Job."</p>";
+					echo "<h3>".$alumni7."</h3><p class='alumni-job'>".$alumni7Job."</p>";
 					if ($answer7 == $h){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer7."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer7."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth'>";
 					echo '<img src="' . plugins_url( 'images/packard-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni8."</h3><p>".$alumni8Job."</p>";
+					echo "<h3>".$alumni8."</h3><p class='alumni-job'>".$alumni8Job."</p>";
 					if ($answer8 == $i){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer8."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer8."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth first'>";
 					echo '<img src="' . plugins_url( 'images/perry-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni9."</h3><p>".$alumni9Job."</p>";
+					echo "<h3>".$alumni9."</h3><p class='alumni-job'>".$alumni9Job."</p>";
 					if ($answer9 == $l){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer9."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer9."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth'>";
 					echo '<img src="' . plugins_url( 'images/sanjayan-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni10."</h3><p>".$alumni10Job."</p>";
+					echo "<h3>".$alumni10."</h3><p class='alumni-job'>".$alumni10Job."</p>";
 					if ($answer10 == $j){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer10."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer10."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth'>";
 					echo '<img src="' . plugins_url( 'images/sullivan-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni11."</h3><p>".$alumni11Job."</p>";
+					echo "<h3>".$alumni11."</h3><p class='alumni-job'>".$alumni11Job."</p>";
 					if ($answer11 == $d){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer11."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer11."</p><hr>";
 					};
 					echo "</li>";
 					echo "<li class='one-fourth'>";
 					echo '<img src="' . plugins_url( 'images/weil-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni12."</h3><p>".$alumni12Job."</p>";
+					echo "<h3>".$alumni12."</h3><p class='alumni-job'>".$alumni12Job."</p>";
 					if ($answer12 == $e){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer12."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer12."</p><hr>";
 					};
 					echo "</li>";
                     echo "<li class='one-fourth first'>";
                     echo '<img src="' . plugins_url( 'images/wojcicki-200h.png', __DIR__ ) . '" > ';
-					echo "<h3>".$alumni13."</h3><p>".$alumni13Job."</p>";
+					echo "<h3>".$alumni13."</h3><p class='alumni-job'>".$alumni13Job."</p>";
 					if ($answer13 == $a){
-						echo "<hr><p class='correct'>Correct!</p>";
+						echo "<p class='correct'>Correct!</p><hr>";
 					} else {
-						echo "<hr><p class='incorrect'>Your answer:<br>".$answer13."</p>";
+						echo "<p class='incorrect'><span>Your answer:</span><br>".$answer13."</p><hr>";
 					};
 					echo "</li>";
 					echo "</ol></div>";
