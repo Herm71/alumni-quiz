@@ -44,6 +44,37 @@
 add_shortcode ('alumni-quiz', 'alumni_quiz');
 function alumni_quiz(){
     include 'variables.php';
+//     // define variables and set to empty values
+//     $firstNameErr = $lastNameErr = $emailErr = $phoneErr = "";
+//     $firstName = $lastName =$email = $phone = "";
+//     // Validate input and sanitize
+//     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//         $valid = true; //Your indicator for your condition.
+//         if (empty($_POST["first-name"])) {
+//             $firstNameErr = "First name is required";
+//             $valid = false;
+//         } else {
+//             $firstName = test_input($_POST["first-name"]);
+//             // check if name only contains letters and whitespace
+//             if (!preg_match("/^[a-zA-Z ]*$/",$firstName)) {
+//             $firstNameErr = "Only letters and white space allowed";
+//             $valid = false; 
+//             }
+//         }
+
+//         //if valid then redirect
+//         // if($valid){
+//         //     header('Location: /quiz-results/');
+//         //     exit();
+//         // }
+
+//     }
+//   function test_input($data) {
+//     $data = trim($data);
+//     $data = stripslashes($data);
+//     $data = htmlspecialchars($data);
+//     return $data;
+//   }
     
     ?>
     <!-- <begin remove from here> -->
@@ -57,14 +88,23 @@ function alumni_quiz(){
 
             <h3>UC Santa Cruz alumni quiz</h3>
             
+            <!-- <form action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="quiz" class="quiz-form"> -->
             <form action="<?php echo  get_permalink(get_page_by_path( 'quiz-results' )); ?>" method="post" id="quiz" class="quiz-form">
-            <!-- <form action="<?php admin_url( 'admin-post.php' )?>" method="post" id="quiz"> -->
+            <div class="one-third first yoa">
+            <?php echo '<img src="' . plugins_url( 'images/y-o-a-badge-200w.png', __DIR__ ) . '" > ';?>
+
+            </div>
+            <div class="two-thirds">
             <ul>
-                <li >First name: <input id="first-name" type="text" name="first-name" value=""></li>
-                <li>Last name: <input id="last-name" type="text" name="last-name" value=""></li>
-                <li>Email: <input id="email" type="email" name="email" value=""></li>
-                <li>Phone: <input id="phone" type="tel" name="phone" value=""></li>
+                <li class="one-half first"><input id="first-name" type="text" name="first-name" value="" placeholder="First name*"><span class="error"><?php echo $firstNameErr;?></span></li>
+                <li class="one-half"><input id="last-name*" type="text" name="last-name" value="" placeholder="Last name*"></li>
+                <li class="one-half first"><input id="email" type="email" name="email" value="" placeholder="Email*"></li>
+                <li class="one-half"><input id="phone" type="tel" name="phone" value="" placeholder="Phone"></li>
+                <div class="clear"></div>
+                <li>* Required fields</li>
             </ul>
+            </div>
+            <div class="clear"></div>
             <hr>
                 <ol>
                 
@@ -342,11 +382,13 @@ function alumni_quiz(){
                     <option id="question-13-answers-L" value="<?php echo htmlspecialchars($l);?>"><?php echo htmlspecialchars($l);?></option>
                     <option id="question-13-answers-M" value="<?php echo htmlspecialchars($m);?>"><?php echo htmlspecialchars($m);?></option>
                         </select>                  
-                </li>
+                </li><div class="three-fourths yoa">
+            <?php echo '<img src="' . plugins_url( 'images/y-o-a-badge-200w.png', __DIR__ ) . '" > ';?></div>
+
                 </ol>
                 <div class="clear"></div>
                 <!-- <input type="hidden" name="action" value="process_quiz"> -->
-                <button type="submit" value="Submit Quiz" />Submit Quiz</button>
+                <button type="submit" value="Submit Quiz" name="submit-quiz" />Submit Quiz</button>
                 <button type="reset" value="Reset the form" />Reset Form</button>
             
             </form>
