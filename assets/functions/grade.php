@@ -8,7 +8,7 @@ add_shortcode ('quiz-results','quiz_results');
 	<div class="quiz-content-area">
 	
 		<!-- <end remove from here> --><?php
-    echo "<div class='quiz-wrap'><h1>UC Santa Cruz Alumni Quiz Results</h1>";
+    echo "<div class='quiz-wrap'><h3>UC Santa Cruz alumni quiz results</h3>";
 		
 		include 'variables.php';
             $firstName = $_POST['first-name'];	
@@ -94,8 +94,7 @@ add_shortcode ('quiz-results','quiz_results');
 							var_dump($file);
 							file_put_contents($file,$json, FILE_APPEND | LOCK_EX);
 				} else {
-					echo "<p>You Lose! ".$firstName."</p><hr>";
-							echo "<div id='results'>$totalCorrect / 13 correct</div>";
+					echo "<p>Nice try, <strong>$firstName</strong>! you got <strong>$totalCorrect / 13 correct.</strong></p><p>Review your answers below. If you'd like give it another shot, click <strong>try again</strong> at the bottom of the page.</p><hr>";
 							echo "<div class='results'>";
 					echo "<ol>";
 					

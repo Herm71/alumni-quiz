@@ -55,7 +55,7 @@ function alumni_quiz(){
     
     <div class="quiz-wrap">
 
-            <h1>UC Santa Cruz Alumni Quiz!</h1>
+            <h3>UC Santa Cruz alumni quiz</h3>
             
             <form action="<?php echo  get_permalink(get_page_by_path( 'quiz-results' )); ?>" method="post" id="quiz" class="quiz-form">
             <!-- <form action="<?php admin_url( 'admin-post.php' )?>" method="post" id="quiz"> -->
