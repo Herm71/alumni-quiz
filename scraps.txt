@@ -1,0 +1,3 @@
+            <form action="<?php echo  get_permalink(get_page_by_path( 'quiz-results' )); ?>" method="post" id="quiz" class="quiz-form">
+
+            <label for="first-name">First name:</label>
