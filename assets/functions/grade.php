@@ -2,12 +2,6 @@
 
 add_shortcode ('quiz-results','quiz_results');
     function quiz_results(){
-		?><!-- <begin remove from here> -->
-		<div class="quiz-container">
-	<div class="quiz-content">
-	<div class="quiz-content-area">
-	
-		<!-- <end remove from here> --><?php
     echo "<div class='quiz-wrap'><h3>UC Santa Cruz alumni quiz results</h3>";
 		
 		include 'variables.php';
@@ -221,13 +215,6 @@ add_shortcode ('quiz-results','quiz_results');
 				}
 	
 	echo '</div>';
-	?><!-- <begin remove from here> -->
-    </div>
-<div class="quiz-widget-area">Hello World</div>
-</div>
-</div>
-
-    <!-- <end remove from here> --><?php
             }
 
     ?>

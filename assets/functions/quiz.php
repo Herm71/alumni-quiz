@@ -4,12 +4,6 @@ add_shortcode ('alumni-quiz', 'alumni_quiz');
 function alumni_quiz(){
     include 'variables.php';
 ?>
-    <!-- <begin remove from here> -->
-    <div class="quiz-container">
-<div class="quiz-content">
-<div class="quiz-content-area">
-
-    <!-- <end remove from here> -->
     
     <div class="quiz-wrap">
 
@@ -320,13 +314,6 @@ function alumni_quiz(){
             </form>
             
         </div>
-        <!-- <begin remove from here> -->
-        </div>
-<div class="quiz-widget-area">Hello World</div>
-</div>
-</div>
-
-        <!-- <end remove from here> -->
         <script>
         $(document).ready(function(){
 $('#quiz').validate();
@@ -334,13 +321,4 @@ $('#quiz').validate();
         </script>
         <?php
     }
-// function quiz_processor(){
-//     if($_POST['process_quiz']){
-//         require_once 'grade.php';
-//         //or your form process code here
-//       }
-// }
-
-// add_action( 'admin_post_nopriv_process_quiz', 'prefix_send_email_to_admin' );
-// add_action( 'admin_post_process_quiz', 'prefix_send_email_to_admin' );
     ?>
