@@ -40,6 +40,9 @@
             margin-bottom: 10px;
         }
     }
+    .error {
+        color: red;
+    }
 }
 
 #quiz {
@@ -128,7 +131,7 @@
         min-height: 100px;
     }
     .correct {
-        color: #f35245;
+        color: #f29813;
         font-weight: bold;
         min-height: 100px;
     }

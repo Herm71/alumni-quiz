@@ -1,3 +1,36 @@
             <form action="<?php echo  get_permalink(get_page_by_path( 'quiz-results' )); ?>" method="post" id="quiz" class="quiz-form">
-
+            
+            <!-- <form action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="quiz" class="quiz-form"> -->
             <label for="first-name">First name:</label>
+
+            //     // define variables and set to empty values
+//     $firstNameErr = $lastNameErr = $emailErr = $phoneErr = "";
+//     $firstName = $lastName =$email = $phone = "";
+//     // Validate input and sanitize
+//     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//         $valid = true; //Your indicator for your condition.
+//         if (empty($_POST["first-name"])) {
+//             $firstNameErr = "First name is required";
+//             $valid = false;
+//         } else {
+//             $firstName = test_input($_POST["first-name"]);
+//             // check if name only contains letters and whitespace
+//             if (!preg_match("/^[a-zA-Z ]*$/",$firstName)) {
+//             $firstNameErr = "Only letters and white space allowed";
+//             $valid = false; 
+//             }
+//         }
+
+//         //if valid then redirect
+//         // if($valid){
+//         //     header('Location: /quiz-results/');
+//         //     exit();
+//         // }
+
+//     }
+//   function test_input($data) {
+//     $data = trim($data);
+//     $data = stripslashes($data);
+//     $data = htmlspecialchars($data);
+//     return $data;
+//   }

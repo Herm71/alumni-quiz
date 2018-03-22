@@ -44,7 +44,7 @@ add_shortcode ('quiz-results','quiz_results');
 			// Correct $answers
 			if($answer1 == $k && $answer2 == $b && $answer3 == $g && $answer4 == $m && $answer5 == $c && $answer6 == $f && $answer7 == $h && $answer8 == $i && $answer9 == $l && $answer10 == $j && $answer11 == $d && $answer12 == $e && $answer13 == $a)
 				{
-					echo "<p>Nice try, $firstName, $totalCorrect / 13 correct!</p><p>Your name has been submitted for a drawing to win free admission for a guest when you <a href='#'title='Register for Alumni Weekend'>register</a> forthe <strong>Alumni Weekend beer and wine reception on April 28, 2018</strong>.</p><hr>";
+					echo "<p>Excellent <strong>$firstName</strong>, $totalCorrect / 13 correct!</p><p>Your name has been submitted for a drawing to win free admission for a guest when you <a href='http://alumniweekend.ucsc.edu/sessions/annual-beer-and-wine-reception/' title='Register for Alumni Weekend'><strong>register for the Alumni Weekend beer and wine reception on April 28, 2018</strong></a>.</p><hr>";
 					echo "<div class='results'>
 					<ol>
 					
@@ -94,7 +94,7 @@ add_shortcode ('quiz-results','quiz_results');
 							//var_dump($json);
 							file_put_contents($file,$json, FILE_APPEND | LOCK_EX);
 				} else {
-					echo "<p>Nice try, <strong>$firstName</strong>! you got <strong>$totalCorrect / 13 correct.</strong></p><p>Review your answers below. If you'd like give it another shot, click <strong>try again</strong> at the bottom of the page.</p><hr>";
+					echo "<p>Nice try <strong>$firstName</strong>! You got <strong>$totalCorrect / 13 correct.</strong></p><p>Review your answers below. If you'd like give it another shot, click <strong>try again</strong> at the bottom of the page.</p><hr>";
 							echo "<div class='results'>";
 					echo "<ol>";
 					
@@ -217,7 +217,7 @@ add_shortcode ('quiz-results','quiz_results');
 					echo "</li>";
 					echo "</ol></div>";
 					echo "<div class='clear'></div>";
-							echo '<button type="reset" value="Try again" />Try Again</button>';
+					echo '<div id="try-again"><form method="post"><input type="button" value="Try again" OnClick="history.go( -1 );return true;"></form></div>';
 				}
 	
 	echo '</div>';

@@ -39,3 +39,21 @@ add_filter( 'http_request_args', 'bb_custom_functionality_hidden', 5, 2 );
 
 // Use shortcodes in widgets
 add_filter( 'widget_text', 'do_shortcode' );
+
+// Enqueue jQuery Libraries
+function add_jQuery_libraries() {
+ 
+    // Registering Scripts
+     wp_register_script('google-hosted-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false);
+
+	 wp_register_script('jquery-validation-plugin', 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js', array('google-hosted-jquery'));
+	 
+	 wp_register_script('clear-form', plugins_url('js/clear-form.js', __DIR__), array('jquery'),'1.1', true);
+
+    // Enqueueing Scripts to the head section
+    wp_enqueue_script('google-hosted-jquery');
+	wp_enqueue_script('jquery-validation-plugin');
+	wp_enqueue_script('clear-form');
+}
+// Wordpress action that says, hey wait! lets add the scripts mentioned in the function as well.
+add_action( 'wp_enqueue_scripts', 'add_jQuery_libraries' );

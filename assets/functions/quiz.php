@@ -1,82 +1,9 @@
 
 <?php
-
-// define variables and set to empty values
-// $firstNameErr = $lastNameErr = $emailErr = $phoneErr = "";
-// $firstName = $lastName =$email = $phone = "";
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     if (empty($_POST["first-name"])) {
-//       $firstNameErr = "First name is required";
-//     } else {
-//       $firstName = test_input($_POST["first-name"]);
-//       // check if name only contains letters and whitespace
-//       if (!preg_match("/^[a-zA-Z ]*$/",$firstName)) {
-//         $firstNameErr = "Only letters and white space allowed"; 
-//       }
-//     }
-    
-//     if (empty($_POST["last-name"])) {
-//         $lastNameErr = "Last name is required";
-//       } else {
-//         $lastName = test_input($_POST["last-name"]);
-//         // check if name only contains letters and whitespace
-//         if (!preg_match("/^[a-zA-Z ]*$/",$lastName)) {
-//           $lastNameErr = "Only letters and white space allowed"; 
-//         }
-//       }
-      
-//     if (empty($_POST["email"])) {
-//       $emailErr = "Email is required";
-//     } else {
-//       $email = test_input($_POST["email"]);
-//       // check if e-mail address is well-formed
-//       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-//         $emailErr = "Invalid email format"; 
-//       }
-//     }
-  
-//   function test_input($data) {
-//     $data = trim($data);
-//     $data = stripslashes($data);
-//     $data = htmlspecialchars($data);
-//     return $data;
-//   }
 add_shortcode ('alumni-quiz', 'alumni_quiz');
 function alumni_quiz(){
     include 'variables.php';
-//     // define variables and set to empty values
-//     $firstNameErr = $lastNameErr = $emailErr = $phoneErr = "";
-//     $firstName = $lastName =$email = $phone = "";
-//     // Validate input and sanitize
-//     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//         $valid = true; //Your indicator for your condition.
-//         if (empty($_POST["first-name"])) {
-//             $firstNameErr = "First name is required";
-//             $valid = false;
-//         } else {
-//             $firstName = test_input($_POST["first-name"]);
-//             // check if name only contains letters and whitespace
-//             if (!preg_match("/^[a-zA-Z ]*$/",$firstName)) {
-//             $firstNameErr = "Only letters and white space allowed";
-//             $valid = false; 
-//             }
-//         }
-
-//         //if valid then redirect
-//         // if($valid){
-//         //     header('Location: /quiz-results/');
-//         //     exit();
-//         // }
-
-//     }
-//   function test_input($data) {
-//     $data = trim($data);
-//     $data = stripslashes($data);
-//     $data = htmlspecialchars($data);
-//     return $data;
-//   }
-    
-    ?>
+?>
     <!-- <begin remove from here> -->
     <div class="quiz-container">
 <div class="quiz-content">
@@ -87,8 +14,7 @@ function alumni_quiz(){
     <div class="quiz-wrap">
 
             <h3>UC Santa Cruz alumni quiz</h3>
-            
-            <!-- <form action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="quiz" class="quiz-form"> -->
+            <p>Match the alumni illustration with the corresponding job title, career, or achievement and enter to win free admission for a guest when you <a href='http://alumniweekend.ucsc.edu/sessions/annual-beer-and-wine-reception/' title='Register for Alumni Weekend'><strong>register for the Alumni Weekend beer and wine reception on April 28, 2018</strong></a>--a $25 value!</p>
             <form action="<?php echo  get_permalink(get_page_by_path( 'quiz-results' )); ?>" method="post" id="quiz" class="quiz-form">
             <div class="one-third first yoa">
             <?php echo '<img src="' . plugins_url( 'images/y-o-a-badge-200w.png', __DIR__ ) . '" > ';?>
@@ -96,9 +22,9 @@ function alumni_quiz(){
             </div>
             <div class="two-thirds">
             <ul>
-                <li class="one-half first"><input id="first-name" type="text" name="first-name" value="" placeholder="First name*"><span class="error"><?php echo $firstNameErr;?></span></li>
-                <li class="one-half"><input id="last-name*" type="text" name="last-name" value="" placeholder="Last name*"></li>
-                <li class="one-half first"><input id="email" type="email" name="email" value="" placeholder="Email*"></li>
+                <li class="one-half first"><input id="first-name" type="text" name="first-name" value="" placeholder="First name*" required><span class="error"><?php echo $firstNameErr;?></span></li>
+                <li class="one-half"><input id="last-name*" type="text" name="last-name" value="" placeholder="Last name*" required></li>
+                <li class="one-half first"><input id="email" type="email" name="email" value="" placeholder="Email*" required></li>
                 <li class="one-half"><input id="phone" type="tel" name="phone" value="" placeholder="Phone"></li>
                 <div class="clear"></div>
                 <li>* Required fields</li>
@@ -401,7 +327,11 @@ function alumni_quiz(){
 </div>
 
         <!-- <end remove from here> -->
-        
+        <script>
+        $(document).ready(function(){
+$('#quiz').validate();
+});
+        </script>
         <?php
     }
 // function quiz_processor(){
