@@ -1,132 +1,155 @@
-/* Quiz Classes
+    /* Quiz Classes
 --------------------------------------------- */
 
 
-/* ## Quiz Classes
+/* # Quiz Classes
 --------------------------------------------- */
 
-.quiz-wrap {
-    width: 100%;
-    h3 {
-        text-align: center;
-    }
-    ul {
-        list-style-type: none;
-        margin-top: 1.5em;
-        li {
-            margin-bottom: 10px;
-        }
-    }
-    .error {
-        color: red;
-    }
+.quiz-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: block;
+    position: relative;
 }
 
-#quiz {
-    input {
-        vertical-align: middle;
-    }
-    select {
-        border: 1px solid #111;
-        // background: transparent;
-        width: 150px;
-        padding: 5px 35px 5px 5px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        height: 34px;
-        // -webkit-appearance: none;
-        // -moz-appearance: none;
-        // appearance: none;
-        background-color: #fff;
-        background-position: right 15px top 15px;
-        //background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #eee;
-        /* target Internet Explorer 9 to undo the custom arrow */
-        @media screen and (min-width: 0\0) {
-            background: none\9;
-            padding: 5px\9;
+.quiz-content {
+    display: inline-block;
+    width: 100%;
+    padding: 6% 0 8% 0;
+}
+
+.quiz-content-area {
+    display: inline-block;
+    width: 70%;
+}
+
+.quiz-widget-area {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    float: right;
+    font-size: 16px;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    .quiz-wrap {
+        width: 100%;
+        h3 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            margin-top: 1.5em;
+            li {
+                margin-bottom: 10px;
+            }
+        }
+        .error {
+            color: red;
         }
     }
-    /* CAUTION: IE hackery ahead */
-    select::-ms-expand {
-        display: none;
-        /* remove default arrow on ie10 and ie11 */
-    }
-    ol {
-        margin: 0 0 10px 20px;
-        li {
-            // margin: 0 0 20px 0;
-            // float: left;
-            // padding: 10px;
-            // width: 22%;
-            text-align: center;
-            min-height: 350px;
-            div {
-                padding: 4px 0;
+    #quiz {
+        input {
+            vertical-align: middle;
+        }
+        select {
+            border: 1px solid #111;
+            // background: transparent;
+            width: 150px;
+            padding: 5px 35px 5px 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            height: 34px;
+            // -webkit-appearance: none;
+            // -moz-appearance: none;
+            // appearance: none;
+            background-color: #fff;
+            background-position: right 15px top 15px;
+            //background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #eee;
+            /* target Internet Explorer 9 to undo the custom arrow */
+            @media screen and (min-width: 0\0) {
+                background: none\9;
+                padding: 5px\9;
+            }
+        }
+        /* CAUTION: IE hackery ahead */
+        select::-ms-expand {
+            display: none;
+            /* remove default arrow on ie10 and ie11 */
+        }
+        ol {
+            margin: 0 0 10px 20px;
+            li {
+                // margin: 0 0 20px 0;
+                // float: left;
+                // padding: 10px;
+                // width: 22%;
+                text-align: center;
+                min-height: 350px;
+                div {
+                    padding: 4px 0;
+                }
+            }
+        }
+        h3 {
+            font-size: 17px;
+            margin: 0 0 1px 0;
+            color: #666;
+        }
+        p {
+            text-align: left;
+            margin: 5px 0;
+        }
+        img {
+            height: 200px;
+            width: 150px;
+        }
+        .yoa {
+            img {
+                height: auto;
+                width: auto;
+                display: block;
+                margin: auto;
             }
         }
     }
-    h3 {
-        font-size: 17px;
-        margin: 0 0 1px 0;
-        color: #666;
+    #results {
+        font: 44px Georgia, Serif;
     }
-    p {
-        text-align: left;
-        margin: 5px 0;
-    }
-    img {
-        height: 200px;
-        width: 150px;
-    }
-    .yoa {
-        img {
-            height: auto;
-            width: auto;
-            display: block;
-            margin: auto;
+    .results {
+        ol {
+            margin: 0 0 10px 20px;
+            li {
+                // margin: 0 0 20px 0;
+                // float: left;
+                // padding: 10px;
+                // width: 22%;
+                text-align: center;
+                min-height: 350px;
+            }
         }
-    }
-}
-
-#results {
-    font: 44px Georgia, Serif;
-}
-
-.results {
-    ol {
-        margin: 0 0 10px 20px;
-        li {
-            // margin: 0 0 20px 0;
-            // float: left;
-            // padding: 10px;
-            // width: 22%;
-            text-align: center;
-            min-height: 350px;
-        }
-    }
-    .alumni-job {
-        font-weight: bold;
-        min-height: 100px;
-    }
-    .correct {
-        color: #f29813;
-        font-weight: bold;
-        min-height: 100px;
-    }
-    .incorrect {
-        font-style: italic;
-        min-height: 100px;
-        span {
-            //text-decoration: underline;
+        .alumni-job {
             font-weight: bold;
+            min-height: 100px;
+        }
+        .correct {
+            color: #f29813;
+            font-weight: bold;
+            min-height: 100px;
+        }
+        .incorrect {
+            font-style: italic;
+            min-height: 100px;
+            span {
+                //text-decoration: underline;
+                font-weight: bold;
+            }
+        }
+        p {
+            text-align: left;
+            margin: 5px 0;
         }
     }
-    p {
-        text-align: left;
-        margin: 5px 0;
+    .clear {
+        clear: both
     }
-}
-
-.clear {
-    clear: both
-}
