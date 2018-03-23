@@ -1,0 +1,8 @@
+.git/
+.gitignore
+.vscode/
+node_modules/
+syncplug
+wpcontent-from
+wpcontent-to
+rsync-exclude.txt

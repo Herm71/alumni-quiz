@@ -8,7 +8,7 @@ function alumni_quiz(){
     
     <div class="quiz-wrap">
 
-            <h3>UC Santa Cruz alumni quiz</h3>
+            <!-- <h3>UC Santa Cruz alumni quiz</h3> -->
             <p>Match the alumni illustration with the corresponding job title, career, or achievement and enter to win free admission for a guest when you <a href='http://alumniweekend.ucsc.edu/sessions/annual-beer-and-wine-reception/' title='Register for Alumni Weekend'><strong>register for the Alumni Weekend beer and wine reception on April 28, 2018</strong></a>--a $25 value!</p>
             <form action="<?php echo  get_permalink(get_page_by_path( 'quiz-results' )); ?>" method="post" id="quiz" class="quiz-form">
             <div class="one-third first yoa">

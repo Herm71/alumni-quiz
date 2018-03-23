@@ -2,7 +2,9 @@
 
 add_shortcode ('quiz-results','quiz_results');
     function quiz_results(){
-    echo "<div class='quiz-wrap'><h3>UC Santa Cruz alumni quiz results</h3>";
+	include 'top-wrap.php';
+	echo "<div class='quiz-wrap'>";
+	// echo "<h3>UC Santa Cruz alumni quiz results</h3>";
 		
 		include 'variables.php';
             $firstName = $_POST['first-name'];	
@@ -216,5 +218,5 @@ add_shortcode ('quiz-results','quiz_results');
 	
 	echo '</div>';
             }
-
+	include 'bottom-wrap.php';
     ?>
