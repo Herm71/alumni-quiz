@@ -34,3 +34,14 @@
 //     $data = htmlspecialchars($data);
 //     return $data;
 //   }
+
+// Flexbox
+ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+li {
+	flex: 0 0 188px;
+}

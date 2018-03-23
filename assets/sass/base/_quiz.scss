@@ -50,6 +50,9 @@
             .error {
                 color: red;
             }
+            button {
+                margin-bottom: 10px;
+            }
         }
         
         #quiz {
@@ -83,11 +86,11 @@
             }
             ol {
                 margin: 0 0 10px 20px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
                 li {
-                    // margin: 0 0 20px 0;
-                    // float: left;
-                    // padding: 10px;
-                    // width: 22%;
+                    flex: 0 0 193px;
                     text-align: center;
                     min-height: 350px;
                     div {
@@ -125,13 +128,14 @@
         .results {
             ol {
                 margin: 0 0 10px 20px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
                 li {
-                    // margin: 0 0 20px 0;
-                    // float: left;
-                    // padding: 10px;
-                    // width: 22%;
+                    flex: 0 0 188px;
                     text-align: center;
                     min-height: 350px;
+                    margin: 0 5px;
                 }
             }
             .alumni-job {
@@ -153,7 +157,7 @@
             }
             p {
                 text-align: left;
-                margin: 5px 0;
+                margin: 5px;
             }
         }
         

@@ -3,7 +3,7 @@
 add_shortcode ('alumni-quiz', 'alumni_quiz');
 function alumni_quiz(){
     include 'variables.php';
-    // include 'top-wrap.php'
+    include 'top-wrap.php'
 ?>
     
     <div class="quiz-wrap">
@@ -29,7 +29,7 @@ function alumni_quiz(){
             <hr>
                 <ol>
                 
-                    <li class="one-fourth first">
+                    <li >
                      <?php echo '<img src="' . plugins_url( 'images/alonso-200h.png', __DIR__ ) . '" > ';?>
                     
                         <h3><?php echo $alumni1?></h3>
@@ -51,7 +51,7 @@ function alumni_quiz(){
                 </select>                   
                     </li>
                     
-                    <li class="one-fourth">
+                    <li >
                 
                     <?php echo '<img src="' . plugins_url( 'images/barnes-200h.png', __DIR__ ) . '" > ';?>
                         <h3><?php echo $alumni2?></h3>
@@ -74,7 +74,7 @@ function alumni_quiz(){
                 
                     </li>
                     
-                    <li class="one-fourth">
+                    <li >
                     
                     <?php echo '<img src="' . plugins_url( 'images/beggs-200h.png', __DIR__ ) . '" > ';?>
                         <h3><?php echo $alumni3?></h3>
@@ -97,7 +97,7 @@ function alumni_quiz(){
                     
                     </li>
                     
-                    <li class="one-fourth">
+                    <li >
                     <?php echo '<img src="' . plugins_url( 'images/grande-200h.png', __DIR__ ) . '" > ';?>
                         <h3><?php echo $alumni4?></h3>
                         <select name="question-4-answers">
@@ -119,7 +119,7 @@ function alumni_quiz(){
                     
                     </li>
                     
-                    <li class="one-fourth first">
+                    <li >
                     <?php echo '<img src="' . plugins_url( 'images/laird-200h.png', __DIR__ ) . '" > ';?>
                    
                         <h3><?php echo $alumni5?></h3>
@@ -141,7 +141,7 @@ function alumni_quiz(){
                 </select>  
                     
                     </li>
-                <li class="one-fourth">
+                <li >
                 <?php echo '<img src="' . plugins_url( 'images/mendoza-200h.png', __DIR__ ) . '" > ';?>
                         <h3><?php echo $alumni6?></h3>
                         <select name="question-6-answers">
@@ -161,7 +161,7 @@ function alumni_quiz(){
                     <option id="question-6-answers-M" value="<?php echo htmlspecialchars($m);?>"><?php echo htmlspecialchars($m);?></option>
                         </select>                  
                 </li>
-                <li class="one-fourth">
+                <li >
                 <?php echo '<img src="' . plugins_url( 'images/nagano-200h.png', __DIR__ ) . '" > ';?>
                         <h3><?php echo $alumni7?></h3>
                         <select name="question-7-answers">
@@ -181,7 +181,7 @@ function alumni_quiz(){
                     <option id="question-7-answers-M" value="<?php echo htmlspecialchars($m);?>"><?php echo htmlspecialchars($m);?></option>
                         </select>                  
                 </li>
-                <li class="one-fourth">
+                <li >
                 <?php echo '<img src="' . plugins_url( 'images/packard-200h.png', __DIR__ ) . '" > ';?>
                         <h3><?php echo $alumni8?></h3>
                         <select name="question-8-answers">
@@ -201,7 +201,7 @@ function alumni_quiz(){
                     <option id="question-8-answers-M" value="<?php echo htmlspecialchars($m);?>"><?php echo htmlspecialchars($m);?></option>
                         </select>                  
                 </li>
-                <li class="one-fourth first">
+                <li >
                 <?php echo '<img src="' . plugins_url( 'images/perry-200h.png', __DIR__ ) . '" > ';?>
                         <h3><?php echo $alumni9?></h3>
                         <select name="question-9-answers">
@@ -221,7 +221,7 @@ function alumni_quiz(){
                     <option id="question-9-answers-M" value="<?php echo htmlspecialchars($m);?>"><?php echo htmlspecialchars($m);?></option>
                         </select>                  
                 </li>
-                <li class="one-fourth">
+                <li >
                 <?php echo '<img src="' . plugins_url( 'images/sanjayan-200h.png', __DIR__ ) . '" > ';?>
              
                         <h3><?php echo $alumni10?></h3>
@@ -242,7 +242,7 @@ function alumni_quiz(){
                     <option id="question-10-answers-M" value="<?php echo htmlspecialchars($m);?>"><?php echo htmlspecialchars($m);?></option>
                         </select>                  
                 </li>
-                <li class="one-fourth">
+                <li >
                 <?php echo '<img src="' . plugins_url( 'images/sullivan-200h.png', __DIR__ ) . '" > ';?>
                 
                         <h3><?php echo $alumni11?></h3>
@@ -263,7 +263,7 @@ function alumni_quiz(){
                     <option id="question-11-answers-M" value="<?php echo htmlspecialchars($m);?>"><?php echo htmlspecialchars($m);?></option>
                         </select>                  
                 </li>
-                <li class="one-fourth">
+                <li >
                 <?php echo '<img src="' . plugins_url( 'images/weil-200h.png', __DIR__ ) . '" > ';?>
                    
                         <h3><?php echo $alumni12?></h3>
@@ -284,7 +284,7 @@ function alumni_quiz(){
                     <option id="question-12-answers-M" value="<?php echo htmlspecialchars($m);?>"><?php echo htmlspecialchars($m);?></option>
                         </select>                  
                 </li>
-                <li class="one-fourth first">
+                <li >
                 <?php echo '<img src="' . plugins_url( 'images/wojcicki-200h.png', __DIR__ ) . '" > ';?>
                         <h3><?php echo $alumni13?></h3>
                         <select name="question-13-answers">
@@ -303,7 +303,7 @@ function alumni_quiz(){
                     <option id="question-13-answers-L" value="<?php echo htmlspecialchars($l);?>"><?php echo htmlspecialchars($l);?></option>
                     <option id="question-13-answers-M" value="<?php echo htmlspecialchars($m);?>"><?php echo htmlspecialchars($m);?></option>
                         </select>                  
-                </li><div class="three-fourths yoa">
+                </li><div class="yoa">
             <?php echo '<img src="' . plugins_url( 'images/y-o-a-badge-200w.png', __DIR__ ) . '" > ';?></div>
 
                 </ol>
@@ -316,7 +316,7 @@ function alumni_quiz(){
             
         </div>
         <?php 
-        // include 'bottom-wrap.php';
+        include 'bottom-wrap.php';
         ?>
         <script>
         $(document).ready(function(){
