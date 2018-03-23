@@ -2,7 +2,7 @@
 
 add_shortcode ('quiz-results','quiz_results');
     function quiz_results(){
-	include 'top-wrap.php';
+	// include 'top-wrap.php';
 	echo "<div class='quiz-wrap'>";
 	// echo "<h3>UC Santa Cruz alumni quiz results</h3>";
 		
@@ -218,5 +218,5 @@ add_shortcode ('quiz-results','quiz_results');
 	
 	echo '</div>';
             }
-	include 'bottom-wrap.php';
+	// include 'bottom-wrap.php';
     ?>
