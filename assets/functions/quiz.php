@@ -3,6 +3,7 @@
 add_shortcode ('alumni-quiz', 'alumni_quiz');
 function alumni_quiz(){
     include 'variables.php';
+    include 'top-wrap.php'
 ?>
     
     <div class="quiz-wrap">
@@ -314,6 +315,9 @@ function alumni_quiz(){
             </form>
             
         </div>
+        <?php 
+        include 'bottom-wrap.php';
+        ?>
         <script>
         $(document).ready(function(){
 $('#quiz').validate();
